@@ -10,11 +10,11 @@ const Message = (props: MessagePropsType) => {
   return (
     <div id={'hw1-message-' + props.message.id} className={s.message}>
       <div className={s.imageAndText}>
-        <img
-          id={'hw1-avatar-' + props.message.id}
+        <img className={s.avatar}
+             id={'hw1-avatar-' + props.message.id}
           // создаёт студент
-          src={props.message.user.avatar}
-          alt={'avatar'}
+             src={props.message.user.avatar}
+             alt={'avatar'}
           //
         />
         <div className={s.text}>

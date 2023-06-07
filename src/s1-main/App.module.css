@@ -1,9 +1,14 @@
 .App {
   --header_height: 60px;
+  width: 1280px;
+  min-height: 373px;
+  background-color: #fff;
 }
 
 .hw1 {
-  width: 1280px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
   padding: 131px 0 216px;
 }
 
@@ -16,8 +21,6 @@
   font-weight: 600;
   font-size: 22px;
   line-height: 27px;
-
-  background-color: #fff;
 }
 
 .hw {
