@@ -13,7 +13,7 @@ type GreetingPropsType = {
 }
 
 // презентационная компонента (для верстальщика)
-const Greeting: React.FC<GreetingPropsType> = (
+export const Greeting: React.FC<GreetingPropsType> = (
   {
     name,
     setNameCallback,
@@ -69,5 +69,3 @@ const Greeting: React.FC<GreetingPropsType> = (
     </div>
   )
 }
-
-export default Greeting
