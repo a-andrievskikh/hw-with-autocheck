@@ -19,32 +19,30 @@ import GreetingContainer from './GreetingContainer'
 
 // types
 export type UserType = {
-  _id: any // need to fix any
-  name: any // need to fix any
+  _id: string
+  name: string
 }
 
-export const pureAddUserCallback = (name: any, setUsers: any, users: any) => { // need to fix any
-  const user = { // need to fix
-  }
-  setUsers([...users, user])
+export const pureAddUserCallback = (name: string, setUsers: (users: UserType[]) => void, users: UserType[]) => {
+  setUsers([...users, { _id: v1(), name: name }])
 }
 
 export const HW3 = () => {
-  const [users, setUsers] = useState<any>([]) // need to fix any
-
-  const addUserCallback = (name: any) => { // need to fix any
+  const [users, setUsers] = useState<UserType[]>([])
+  // debugger
+  const addUserCallback = (name: string) => {
     pureAddUserCallback(name, setUsers, users)
   }
 
   return (
-    <div id={'hw3'}>
-      <div className={s2.hwTitle}>Homework #3</div>
-      {/*для автоматической проверки дз (не менять)*/}
+    <div id={ 'hw3' }>
+      <div className={ s2.hwTitle }>Homework #3</div>
+      {/*для автоматической проверки дз (не менять)*/ }
 
-      <div className={s2.hw}>
+      <div className={ s2.hw }>
         <GreetingContainer
-          users={users}
-          addUserCallback={addUserCallback}
+          users={ users }
+          addUserCallback={ addUserCallback }
         />
       </div>
     </div>
