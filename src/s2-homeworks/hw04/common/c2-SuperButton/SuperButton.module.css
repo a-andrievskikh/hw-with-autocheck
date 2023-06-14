@@ -1,16 +1,31 @@
 .button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 24px;
+  gap: 10px;
 }
 
 .disabled {
+  background: #004d99;
+  opacity: 0.5;
+  border-radius: 3px;
 }
 
 .secondary {
+  border: 1px solid #06c;
+  border-radius: 3px;
 }
 
 .default {
+  background: #06c;
+  border-radius: 3px;
 }
 
 .red {
+  background: #cc1439;
+  border-radius: 3px;
 }
 
 .default:hover {
